@@ -22,16 +22,16 @@ public class Platinum extends Membership {
     }
     
     public void hitungBiaya(){
-        this.poin = banyakHari * 1;
+        this.poin = banyakHari * 3;
         this.sewa = this.sewa * this.banyakHari;
         this.diskon = (this.sewa * this.diskon)/100;
         this.sewa = this.sewa - this.diskon;
     }
     
     public void output(){
-        System.out.println("Total Sewa      : " + this.sewa);
+        System.out.println("Total Sewa      : Rp. " + this.sewa);
         System.out.println("Jumlah Poin     : " + this.poin);
-        System.out.println("Jumlah Cashback : " + this.cashback);
-        System.out.println("Bonus Pulsa     : " + this.pulsa);
+        System.out.println("Jumlah Cashback : Rp. " + this.cashback);
+        System.out.println("Bonus Pulsa     : Rp. " + this.pulsa);
     }
 }

@@ -21,14 +21,14 @@ public class Gold extends Membership{
     }
     
     public void hitungBiaya(){
-        this.poin = banyakHari * 1;
+        this.poin = banyakHari * 2;
         this.sewa = this.sewa * this.banyakHari;
         this.diskon = (this.sewa * this.diskon)/100;
         this.sewa = this.sewa - this.diskon;
     }
     
     public void output(){
-        System.out.println("Total Sewa      : " + this.sewa);
+        System.out.println("Total Sewa      : Rp. " + this.sewa);
         System.out.println("Jumlah Poin     : " + this.poin);
         System.out.println("Jumlah Cashback : " + this.cashback);
     }

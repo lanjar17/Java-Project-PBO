@@ -50,6 +50,7 @@ public class Membership {
     }
     
     public void inputPinjaman(){
+        
         Scanner input = new Scanner(System.in);
         System.out.print("Masukkan Tanggal Pinjam (1-31)    : ");
         int tanggalPjm = input.nextInt();
@@ -63,16 +64,14 @@ public class Membership {
         int bulanKembali = input.nextInt();
         System.out.print("Masukkan Tahun Kembali            : ");
         int tahunKembali = input.nextInt();
-        
+        System.out.println();
         this.from = LocalDate.of(tahunPjm, bulanPjm, tanggalPjm);
-        this.to = LocalDate.of(tahunKembali, bulanKembali, tanggalKembali);
-        this.banyakHari = (int) ChronoUnit.DAYS.between(this.from, this.to);
-    }
-    
-    public void output(){
         System.out.println("Tanggal Pinjam      : " + this.from);
+        this.to = LocalDate.of(tahunKembali, bulanKembali, tanggalKembali);
         System.out.println("Tanggal Kembali     : " + this.to);
-        System.out.println("Lama Sewa           : " + this.banyakHari);
+        this.banyakHari = (int) ChronoUnit.DAYS.between(this.from, this.to);
+        System.out.println("Lama Sewa           : " + this.banyakHari + " hari");
+        System.out.println();
     }
     
 }
